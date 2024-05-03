@@ -1,0 +1,55 @@
+.heading {
+  padding-left: 60px;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 25px;
+  margin: 0;
+}
+
+.headingText {
+  font-family: "Dancing Script", cursive;
+  line-height: 1.5;
+  letter-spacing: 0.07em;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.mainBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feelsLikeBox {
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.07em;
+  padding-top: 10px;
+}
+
+.degreeColor {
+  color: #3758cb;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.descriptionBox {
+  align-items: center;
+  justify-content: center;
+  padding-right: 150px;
+  font-size: 22px;
+}
+
+.weatherMenu {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.mainHeading {
+  font-family: "Dancing Script", cursive;
+  margin: 0;
+}
