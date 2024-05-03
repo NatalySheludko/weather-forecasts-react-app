@@ -1,0 +1,14 @@
+.temperatureForecastDay,
+.temperatureForecastNight {
+  font-size: 18px;
+}
+
+.temperatureForecastNight {
+  opacity: 0.6;
+}
+
+.degree {
+  color: #3758cb;
+  font-weight: 500;
+  font-size: 18px;
+}
