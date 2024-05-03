@@ -1,0 +1,25 @@
+.weather {
+  padding: 30px 30px;
+}
+
+.searchLine {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 30px;
+  padding-top: 40px;
+  padding-left: 120px;
+}
+
+.searchLine:hover::before {
+  position: absolute;
+  content: "Weather App";
+  left: 2;
+  bottom: 40px;
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 1.5;
+  letter-spacing: 0.07em;
+  color: rgba(255, 0, 0, 0.685);
+}
