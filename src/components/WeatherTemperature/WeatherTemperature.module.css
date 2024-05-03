@@ -1,0 +1,12 @@
+.currentTemperature {
+  font-size: 65px;
+  margin-right: 5px;
+}
+
+.unit {
+  font-size: 23px;
+  color: #3758cb;
+  font-weight: 600;
+  position: relative;
+  top: -30px;
+}
