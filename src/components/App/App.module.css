@@ -1,0 +1,17 @@
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  max-height: 500px;
+  border: 1px solid #dadde1;
+  background-color: rgb(190, 178, 178);
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(188, 228, 235, 0.825),
+      rgba(188, 228, 235, 0.825)
+    ),
+    url(./img/blue-sky.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
