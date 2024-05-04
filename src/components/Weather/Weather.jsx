@@ -1,22 +1,14 @@
-import { useState, CSSProperties } from "react";
-import ClipLoader from "react-spinners/ClipLoader";
+import { useState } from "react";
 import axios from "axios";
 
-import css from "../Weather/Weather.module.css"
+import css from "../Weather/Weather.module.css";
 
 import WeatherInfo from "../WeatherInfo/WeatherInfo";
 import Forecast from "../Forecast/Forecast";
 
 export default function Weather(props) {
-	let override: CSSProperties = {
-    display: "block",
-    margin: "0 auto",
-    borderColor: "red",
-  };
   const [showWeatherData, setWeatherData] = useState({ ready: false });
-	const [showCity, setCity] = useState(props.defaultCity);
-	const [loading, setLoading] = useState(true);
-  const [color, setColor] = useState("#ffffff");
+  const [showCity, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     //console.log(response.data);
@@ -77,24 +69,6 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return (
-      <div className="sweet-loading">
-        <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
-        <input
-          value={color}
-          onChange={(input) => setColor(input.target.value)}
-          placeholder="Color of the loader"
-        />
-
-        <ClipLoader
-          color={color}
-          loading={loading}
-          cssOverride={override}
-          size={150}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-        />
-      </div>
-    );
+    return <span className={css.loader}></span>;
   }
 }
