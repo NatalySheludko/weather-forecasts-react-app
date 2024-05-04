@@ -1,6 +1,5 @@
 import css from "../WeatherTemperature/WeatherTemperature.module.css";
 
-
 export default function WeatherTemperature(props) {
   return (
     <div>
