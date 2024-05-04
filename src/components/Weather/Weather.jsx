@@ -11,7 +11,6 @@ export default function Weather(props) {
   const [showCity, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    //console.log(response.data);
     setWeatherData({
       ready: true,
       coordinates: response.data.coordinates,
@@ -46,8 +45,8 @@ export default function Weather(props) {
   if (showWeatherData.ready) {
     return (
       <div className={css.weather}>
-        <form className={css.searchLine} onSubmit={handleSubmit}>
-          <div className={css.row}>
+        <form onSubmit={handleSubmit}>
+          <div className={css.searchLine}>
             <div>
               <input
                 type="search"
@@ -58,11 +57,11 @@ export default function Weather(props) {
               />
             </div>
             <div>
-              {" "}
               <input type="submit" value="Search" className={css.btn} />
             </div>
           </div>
         </form>
+
         <WeatherInfo data={showWeatherData} />
         <Forecast coordinates={showWeatherData.coordinates} />
       </div>

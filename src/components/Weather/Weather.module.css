@@ -1,43 +1,65 @@
 .weather {
-  padding: 30px 30px;
+  padding: 50px 0px;
 }
 
 .searchLine {
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  margin-bottom: 30px;
-  padding-top: 40px;
-  padding-left: 120px;
+  display: flex;
+  justify-content: center;
 }
 
-.searchLine:hover::before {
-  position: absolute;
-  content: "Weather App";
-  left: 2;
-  bottom: 40px;
-  font-family: "Dancing Script", cursive;
-  font-weight: 600;
-  font-size: 35px;
-  line-height: 1.5;
-  letter-spacing: 0.07em;
-  color: rgba(255, 0, 0, 0.685);
+.formControl {
+  padding: 8px 100px;
+  margin-right: 20px;
+  font-family: "Brygada 1918", serif;
+  font-style: italic;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 2px solid rgb(172, 45, 172);
+  background-color: rgb(241, 232, 250);
+  outline-color: transparent;
+}
+
+.formControl::placeholder {
+  background-color: rgb(241, 232, 250);
+}
+
+.btn {
+  padding: 8px 55px;
+  font-family: "Brygada 1918", serif;
+  font-style: italic;
+  font-size: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 2px solid rgb(172, 45, 172);
+  background-color: rgb(241, 232, 250);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: rgb(189, 139, 236);
+}
+
+.formControl:hover,
+.formControl:focus {
+  border-color: rgb(172, 45, 172);
+  font-family: "Brygada 1918", serif;
+  font-style: italic;
 }
 
 .loader {
   width: 180px;
   height: 140px;
   display: block;
-  margin: 0 auto 20px;
+  margin: 110px auto;
   background-image: radial-gradient(
       circle 25px at 25px 25px,
-      #fff 100%,
+       #4cb1eb 100%,
       transparent 0
     ),
-    radial-gradient(circle 50px at 50px 50px, #fff 100%, transparent 0),
-    radial-gradient(circle 25px at 25px 25px, #fff 100%, transparent 0),
-    radial-gradient(circle 15px at 15px 15px, #fff 100%, transparent 0),
-    linear-gradient(#fff 50px, transparent 0);
+    radial-gradient(circle 50px at 50px 50px, #43afea 100%, transparent 0),
+    radial-gradient(circle 25px at 25px 25px, #47aae3 100%, transparent 0),
+    radial-gradient(circle 15px at 15px 15px, #56a4f8 100%, transparent 0),
+    linear-gradient(#43afea 50px, transparent 0);
   background-size: 50px 50px, 100px 75px, 50px 50px, 30px 32px, 136px 20px;
   background-repeat: no-repeat;
   background-position: 0px 30px, 30px 0px, 113px 29px, 147px 50px, 23px 60px;
