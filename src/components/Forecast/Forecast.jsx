@@ -12,7 +12,6 @@ export default function Forecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    //console.log(response.data);
     setForecast(response.data.daily);
     setLoaded(true);
   }
@@ -26,22 +25,19 @@ export default function Forecast(props) {
   }
 
   if (loaded) {
-    //console.log(forecast);
     return (
-      <div className={css.forecast}>
-        <div className={css.row}>
+      <div className={css.forecast}>        
           {forecast.map((dailyForecast, index) => {
             if (index < 6) {
               return (
-                <div className={css.colSecond} key={index}>
+                <div key={index}>
                   <ForecastDay data={dailyForecast} />
                 </div>
               );
             } else {
               return null;
             }
-          })}
-        </div>
+          })}      
       </div>
     );
   } else {

@@ -1,7 +1,12 @@
 .forecast {
-  margin: 40px 0;
+	display: flex;
+	justify-content: center;
+	column-gap: 55px;
+  padding: 80px 0px 10px 0px;
   text-align: center;
 }
+
+
 
 
 
