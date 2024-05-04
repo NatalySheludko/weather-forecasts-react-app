@@ -20,10 +20,12 @@ export default function ForecastDay(props) {
     return days[day];
   }
   return (
-    <div>
-      <div className={css.weekdaysForecast}> {day()}</div>
+		<div>
+			
+			<div className={css.weekdaysForecast}> {day()}</div>
+			
       <div>
-        <WeatherAnimatedIcon code={props.data.condition.icon} size={32} />
+        <WeatherAnimatedIcon code={props.data.condition.icon} size={50} />
         <br />
         <span className={css.temperatureForecastDay}>
           {maxTemperature()}
@@ -33,7 +35,8 @@ export default function ForecastDay(props) {
           {minTemperature()}
           <span className={css.degree}>°</span>
         </span>
-      </div>
+			</div>
+			
     </div>
   );
 }
