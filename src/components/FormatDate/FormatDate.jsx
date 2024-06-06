@@ -1,5 +1,5 @@
-export default function FormatDate(props) {
-  let days = [
+export default function FormatDate({ time }) {
+  const days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -8,17 +8,17 @@ export default function FormatDate(props) {
     "Friday",
     "Saturday",
   ];
-  let day = days[props.time.getDay()];
-  let hours = props.time.getHours();
+  const day = days[time.getDay()];
+  let hours = time.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
 
-  let minutes = props.time.getMinutes();
+  let minutes = time.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  
+
   return (
     <div>
       {day} {hours}:{minutes}

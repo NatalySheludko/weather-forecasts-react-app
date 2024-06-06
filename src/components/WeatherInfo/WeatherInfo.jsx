@@ -4,18 +4,29 @@ import WeatherAnimatedIcon from "../WeatherAnimatedIcon/WeatherAnimatedIcon";
 import WeatherTemperature from "../WeatherTemperature/WeatherTemperature";
 import FormatDate from "../FormatDate/FormatDate";
 
-export default function WeatherInfo(props) {
+export default function WeatherInfo({ data }) {
+  const {
+    city,
+    icon,
+    temperature,
+    feels_like,
+    humidity,
+    wind,
+    time,
+    description,
+  } = data;
+
   return (
     <div className={css.weatherInfo}>
       <div className={css.weather}>
-        <h2 className={css.heading}>{props.data.city}</h2>
+        <h2 className={css.heading}>{city}</h2>
 
         <div className={css.mainBox}>
           <div>
-            <WeatherAnimatedIcon code={props.data.icon} size={80} />
+            <WeatherAnimatedIcon code={icon} size={80} />
           </div>
           <div>
-            <WeatherTemperature celsius={props.data.temperature} />
+            <WeatherTemperature celsius={temperature} />
           </div>
         </div>
       </div>
@@ -23,11 +34,11 @@ export default function WeatherInfo(props) {
       <div className={css.feelsLikeBox}>
         <ul>
           <li>
-            Feels like: {props.data.feels_like}
+            Feels like: {feels_like}
             <span className={css.degreeColor}>°</span>
           </li>
-          <li>Humidity: {props.data.humidity}%</li>
-          <li>Wind: {props.data.wind} km/h</li>
+          <li>Humidity: {humidity}%</li>
+          <li>Wind: {wind} km/h</li>
         </ul>
       </div>
 
@@ -37,9 +48,9 @@ export default function WeatherInfo(props) {
             <h1 className={css.mainTitle}>Weather</h1>
           </li>
           <li>
-            <FormatDate time={props.data.time} />
+            <FormatDate time={time} />
           </li>
-          <li>{props.data.description}</li>
+          <li>{description}</li>
         </ul>
       </div>
     </div>

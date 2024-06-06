@@ -6,9 +6,9 @@ import css from "../Weather/Weather.module.css";
 import WeatherInfo from "../WeatherInfo/WeatherInfo";
 import Forecast from "../Forecast/Forecast";
 
-export default function Weather(props) {
+export default function Weather({ defaultCity }) {
   const [showWeatherData, setWeatherData] = useState({ ready: false });
-  const [showCity, setCity] = useState(props.defaultCity);
+  const [showCity, setCity] = useState(defaultCity);
 
   function handleResponse(response) {
     setWeatherData({
@@ -28,17 +28,15 @@ export default function Weather(props) {
   function handleSubmit(event) {
     event.preventDefault();
     search();
-    //search for a city
   }
 
   function handleCityChange(event) {
-    //update city
     setCity(event.target.value);
   }
 
   function search() {
-    const apiKey = "6fa3cb02fc6ct4bd31ab65905b1ado1a";
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${showCity}&key=${apiKey}&units=metric`;
+    const API_KEY = "6fa3cb02fc6ct4bd31ab65905b1ado1a";
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${showCity}&key=${API_KEY}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
