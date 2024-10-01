@@ -11,6 +11,7 @@ As a developer on this project, I was responsible for several key aspects:
 - API Integration: Utilized Axios to fetch weather data from a third-party API to ensure accurate and up-to-date weather forecasts. 
 - Search Functionality: Allows users to search for weather information in different cities worldwide.
 - UI/UX Design: Focused on creating a clean and intuitive interface using HTML and CSS3 to make the application easy.
+- Adaptive design for desktop (1440px).
 - Version Control: Managed the codebase using Git.
 - Problem Solving and Research: Actively participated in identifying and solving technical challenges and conducting research to find optimal solutions.
 
